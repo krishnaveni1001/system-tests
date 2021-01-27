@@ -1,0 +1,12 @@
+SUITE=$1
+docker run \
+	--volume $(pwd)/reports:/tmp \
+	--network system-tests \
+  gcr.io/awesomecstools/system-tests/qa-automation:latest \
+  java -jar /Cargosphere-Automation-0.0.1-SNAPSHOT-jar-with-dependencies.jar \
+	--features classpath:features/$SUITE \
+	--base-url proxy \
+	--protocol http \
+	--chrome-driver-path /usr/bin/chromedriver \
+	--headless \
+	--report-directory-path /tmp

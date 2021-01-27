@@ -1,0 +1,1618 @@
+{
+  "globalScopeData" : [ ],
+  "surchargeGlobalData" : [ {
+    "tradeLane" : "AEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "JP"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "1",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 29.0,
+      "priceBy" : "PER_BOL"
+    } ]
+  }, {
+    "tradeLane" : "AEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "NL"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "29",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 22.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID",
+      "electronicBooking" : "W"
+    } ]
+  }, {
+    "tradeLane" : "AEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "NL"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "46",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 51.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "AEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "58",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "GBP",
+      "amount" : 25.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "AEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "NL"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "59",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "GBP",
+      "amount" : 26.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "AEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O",
+        "routings" : {
+          "routing" : [ "NL" ],
+          "groupType" : "C"
+        }
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "60",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "GBP",
+      "amount" : 27.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "AEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O",
+        "routings" : {
+          "routing" : [ "NL" ],
+          "groupType" : "C"
+        }
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "61",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 40.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "AEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "O4" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "3",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "HEA",
+      "surchargeDescription" : "HEAVY SURCHARGE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 10.0,
+      "priceBy" : "PER_CONTAINER",
+      "tierCharges" : {
+        "lowerLimit" : 1.0,
+        "upperLimit" : 0.0,
+        "unitOfMeasure" : "Ton"
+      }
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "JP"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "BK" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "1",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 21.0,
+      "priceBy" : "PER_CONTAINER"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "JP"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "BK" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "2",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 25.0,
+      "priceBy" : "PER_CONTAINER"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "HK"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "20" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "3",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 25.0,
+      "priceBy" : "PER_CONTAINER",
+      "electronicBooking" : "W"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "HK"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "20" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "4",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 30.0,
+      "priceBy" : "PER_CONTAINER",
+      "electronicBooking" : "E"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "HK"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "20" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "5",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 35.0,
+      "priceBy" : "PER_CONTAINER",
+      "electronicBooking" : "W"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "HK"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "20" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "6",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 40.0,
+      "priceBy" : "PER_CONTAINER",
+      "electronicBooking" : "E"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "HK"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "20" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "7",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 25.0,
+      "priceBy" : "PER_CONTAINER",
+      "electronicBooking" : "W"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "HK"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "20" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "8",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 30.0,
+      "priceBy" : "PER_CONTAINER",
+      "electronicBooking" : "E"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "HK"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "20" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "9",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 35.0,
+      "priceBy" : "PER_CONTAINER",
+      "electronicBooking" : "W"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "HK"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "20" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "10",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 40.0,
+      "priceBy" : "PER_CONTAINER",
+      "electronicBooking" : "E"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D",
+        "routings" : {
+          "routing" : [ "BSND" ],
+          "groupType" : "G"
+        }
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "6",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AMA",
+      "surchargeDescription" : "ADVANCE MANIFEST AMENDMENT FEE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 40.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D",
+        "routings" : {
+          "routing" : [ "BSND" ],
+          "groupType" : "G"
+        }
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "9",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AMA",
+      "surchargeDescription" : "ADVANCE MANIFEST AMENDMENT FEE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 50.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID",
+      "electronicBooking" : "E",
+      "notes" : "This fee shall be prepaid by shipper."
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D",
+        "routings" : {
+          "routing" : [ "BSND" ],
+          "groupType" : "G"
+        }
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "13",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AMA",
+      "surchargeDescription" : "ADVANCE MANIFEST AMENDMENT FEE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 50.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID",
+      "electronicBooking" : "W"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "8",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "BAD",
+      "surchargeDescription" : "BL AMENDMENT FEE",
+      "surchargeType" : "A",
+      "currency" : "SGD",
+      "amount" : 140.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "ID"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "1",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "BAO",
+      "surchargeDescription" : "BL AMENDMENT FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "IDR",
+      "amount" : 250000.0,
+      "priceBy" : "PER_BOL"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "2",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "BAO",
+      "surchargeDescription" : "BL AMENDMENT FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "SGD",
+      "amount" : 140.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "4",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "BAO",
+      "surchargeDescription" : "BL AMENDMENT FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "SGD",
+      "amount" : 100.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID",
+      "electronicBooking" : "D"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "5",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "BAO",
+      "surchargeDescription" : "BL AMENDMENT FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "SGD",
+      "amount" : 140.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "R5" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "10",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "BRS",
+      "surchargeDescription" : "BUNKER COST RECOVERY SURCHARGE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 100.0,
+      "priceBy" : "PER_CONTAINER",
+      "rateType" : "DR"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "28",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "SGD",
+      "amount" : 140.0,
+      "priceBy" : "PER_BOL"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "33",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "SGD",
+      "amount" : 100.0,
+      "priceBy" : "PER_BOL",
+      "electronicBooking" : "D"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "N",
+        "origDestInd" : "D",
+        "groupType" : "C",
+        "countryCode" : "ID"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "4",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DPC",
+      "surchargeDescription" : "DATA PROCESS CHARGE",
+      "surchargeType" : "N",
+      "currency" : "AUD",
+      "amount" : 100.0,
+      "priceBy" : "PER_CONTAINER",
+      "electronicBooking" : "E"
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupName" : "AOTJ",
+        "groupType" : "G"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "D2" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "3",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "HEA",
+      "surchargeDescription" : "HEAVY SURCHARGE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 290.0,
+      "priceBy" : "PER_CONTAINER",
+      "tierCharges" : {
+        "lowerLimit" : 24.0,
+        "upperLimit" : 0.0,
+        "unitOfMeasure" : "Ton"
+      },
+      "notes" : "ORIGIN: NOT JAPAN\n\nApplies to all 20' dry container where cargo weight* is 24 tonnes or above (*excluding container tare weight) and covers increased operational costs as well as potential 'lost business opportunities' due to associated deadweight operational issues."
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupName" : "AOTJ",
+        "groupType" : "G"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "D2" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "5",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "HEA",
+      "surchargeDescription" : "HEAVY SURCHARGE",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 150.0,
+      "priceBy" : "PER_CONTAINER",
+      "tierCharges" : {
+        "lowerLimit" : 12.0,
+        "upperLimit" : 23.99,
+        "unitOfMeasure" : "Ton"
+      }
+    } ]
+  }, {
+    "tradeLane" : "AEW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupName" : "AOTJ",
+        "groupType" : "G"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "D2" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "6",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "HEA",
+      "surchargeDescription" : "HEAVY SURCHARGE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 150.0,
+      "priceBy" : "PER_CONTAINER",
+      "tierCharges" : {
+        "lowerLimit" : 15.0,
+        "upperLimit" : 18.0,
+        "unitOfMeasure" : "Ton"
+      }
+    } ]
+  }, {
+    "tradeLane" : "AMW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "N",
+        "origDestInd" : "D",
+        "groupType" : "C",
+        "countryCode" : "ES",
+        "routings" : {
+          "routing" : [ "ESBCN" ],
+          "groupType" : "L"
+        }
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "1",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DST",
+      "surchargeDescription" : "DESTINATION CHARGE",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 500.0,
+      "priceBy" : "PER_CONTAINER"
+    } ]
+  }, {
+    "tradeLane" : "IAA",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "JP"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "3",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "AAC",
+      "surchargeDescription" : "AA CONTROL",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 50.0,
+      "priceBy" : "PER_CONTAINER"
+    } ]
+  }, {
+    "tradeLane" : "IAA",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "9",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DPC",
+      "surchargeDescription" : "DATA PROCESS CHARGE",
+      "surchargeType" : "A",
+      "currency" : "SGD",
+      "amount" : 1111.0,
+      "priceBy" : "PER_BOL",
+      "electronicBooking" : "D"
+    } ]
+  }, {
+    "tradeLane" : "IAA",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "N",
+        "origDestInd" : "D",
+        "groupType" : "L",
+        "unCode" : "MYPKG"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "20" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "280",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "THD",
+      "surchargeDescription" : "TERMINAL HANDLING CHARGE (D)",
+      "surchargeType" : "A",
+      "currency" : "MYR",
+      "amount" : 460.0,
+      "priceBy" : "PER_CONTAINER",
+      "rateType" : "DR",
+      "paymentType" : "COLLECT",
+      "notes" : "Applicable for MYPKG only."
+    } ]
+  }, {
+    "tradeLane" : "IWW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "D2" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "1",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "HEA",
+      "surchargeDescription" : "HEAVY SURCHARGE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 150.0,
+      "priceBy" : "PER_CONTAINER",
+      "paymentType" : "UNSPECIFIED",
+      "tierCharges" : {
+        "lowerLimit" : 17.71,
+        "upperLimit" : 24.01,
+        "unitOfMeasure" : "Ton"
+      }
+    } ]
+  }, {
+    "tradeLane" : "IWW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "D2" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "2",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "HEA",
+      "surchargeDescription" : "HEAVY SURCHARGE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 200.0,
+      "priceBy" : "PER_CONTAINER",
+      "paymentType" : "UNSPECIFIED",
+      "tierCharges" : {
+        "lowerLimit" : 24.01,
+        "upperLimit" : 99.0,
+        "unitOfMeasure" : "Ton"
+      }
+    } ]
+  }, {
+    "tradeLane" : "IWW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "D2" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "3",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "HEA",
+      "surchargeDescription" : "HEAVY SURCHARGE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 110.0,
+      "priceBy" : "PER_CONTAINER",
+      "paymentType" : "UNSPECIFIED",
+      "tierCharges" : {
+        "lowerLimit" : 13.0,
+        "upperLimit" : 17.71,
+        "unitOfMeasure" : "Ton"
+      }
+    } ]
+  }, {
+    "tradeLane" : "NZS",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "SG"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "5",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DPC",
+      "surchargeDescription" : "DATA PROCESS CHARGE",
+      "surchargeType" : "A",
+      "currency" : "SGD",
+      "amount" : 1111.0,
+      "priceBy" : "PER_BOL",
+      "electronicBooking" : "D"
+    } ]
+  }, {
+    "tradeLane" : "TPE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "JP"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "BK" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "55",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "BKF",
+      "surchargeDescription" : "BOOKING FEE",
+      "surchargeType" : "A",
+      "currency" : "JPY",
+      "amount" : 3333.0,
+      "priceBy" : "PER_CONTAINER",
+      "notes" : "FOR JPN TEST"
+    } ]
+  }, {
+    "tradeLane" : "TPE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "VN"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "2",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "VVN",
+      "surchargeDescription" : "VIETNAM TAX (GENERAL)",
+      "surchargeType" : "A",
+      "currency" : "VND",
+      "amount" : 5.263,
+      "priceBy" : "PERCENT",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "TPW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "2",
+      "rateStatus" : "Delete",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "N",
+      "currency" : "USD",
+      "amount" : 25.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "UNSPECIFIED",
+      "electronicBooking" : "D",
+      "notes" : "testing"
+    } ]
+  }, {
+    "tradeLane" : "TPW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "3",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 35.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "UNSPECIFIED",
+      "electronicBooking" : "W",
+      "notes" : "test"
+    } ]
+  }, {
+    "tradeLane" : "TPW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "4",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 40.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "UNSPECIFIED",
+      "electronicBooking" : "D",
+      "notes" : "test"
+    } ]
+  }, {
+    "tradeLane" : "TPW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "5",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 25.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "UNSPECIFIED",
+      "electronicBooking" : "E",
+      "notes" : "test"
+    } ]
+  }, {
+    "tradeLane" : "TPW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O",
+        "routings" : {
+          "routing" : [ "USEC" ],
+          "groupType" : "G"
+        }
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "D4" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "23",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "OBS",
+      "surchargeDescription" : "ONE BUNKER SURCHARGE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 108.0,
+      "priceBy" : "PER_CONTAINER",
+      "notes" : "ONEY-202; Rule 102.001 - Bunker Adjustment Factor"
+    } ]
+  }, {
+    "tradeLane" : "TPW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O",
+        "routings" : {
+          "routing" : [ "USEC" ],
+          "groupType" : "G"
+        }
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "D5" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "32",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "OBS",
+      "surchargeDescription" : "ONE BUNKER SURCHARGE",
+      "surchargeType" : "A",
+      "currency" : "USD",
+      "amount" : 150.0,
+      "priceBy" : "PER_CONTAINER"
+    } ]
+  }, {
+    "tradeLane" : "WEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "DE"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "31",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 0.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID",
+      "electronicBooking" : "D"
+    } ]
+  }, {
+    "tradeLane" : "WEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "ES"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "36",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 60.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "WEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "DE"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "47",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 100.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "WEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "BE"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "48",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 52.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID"
+    } ]
+  }, {
+    "tradeLane" : "WEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "BE"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "49",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 24.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID",
+      "electronicBooking" : "D"
+    } ]
+  }, {
+    "tradeLane" : "WEE",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "ES"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "51",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "DOC",
+      "surchargeDescription" : "DOC FEE (ORIGIN)",
+      "surchargeType" : "A",
+      "currency" : "EUR",
+      "amount" : 45.0,
+      "priceBy" : "PER_BOL",
+      "paymentType" : "PREPAID",
+      "electronicBooking" : "W"
+    } ]
+  }, {
+    "tradeLane" : "WFW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "N",
+        "origDestInd" : "O",
+        "groupType" : "C",
+        "countryCode" : "OM"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "1",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "ADC",
+      "surchargeDescription" : "ADDITIONAL COSTS",
+      "surchargeType" : "A",
+      "currency" : "OMR",
+      "amount" : 6.0,
+      "priceBy" : "PER_CONTAINER"
+    } ]
+  }, {
+    "tradeLane" : "WFW",
+    "locationData" : {
+      "originAndDestination" : [ {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "O"
+      }, {
+        "anyLocationInd" : "Y",
+        "origDestInd" : "D"
+      } ]
+    },
+    "containerData" : {
+      "containerGroup" : [ {
+        "containerCode" : [ "A2" ]
+      } ],
+      "containerCode" : [ ]
+    },
+    "surchargeDataGlobal" : [ {
+      "referenceId" : "2",
+      "effectiveDate" : [ 2019, 11, 26 ],
+      "expirationDate" : [ 9999, 12, 31 ],
+      "term" : "ADC",
+      "surchargeDescription" : "ADDITIONAL COSTS",
+      "surchargeType" : "A",
+      "currency" : "AED",
+      "amount" : 1.0,
+      "priceBy" : "PER_CONTAINER"
+    } ]
+  } ]
+}

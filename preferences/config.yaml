@@ -1,0 +1,12 @@
+postgres:
+  HOST: ${POSTGRES_HOST}
+  DB: ${POSTGRES_DB}
+  USER: ${POSTGRES_USER}
+  PASSWORD: ${POSTGRES_PASSWORD}
+  CONNECTION_TIMEOUT: "5"
+  CONNECTION_MAX_LIFETIME: 86400
+auth:
+  AUTH_SERVICE_URL: "http://proxy/api/auth/publickey?format=pem"
+LOG_LEVEL : "debug"
+BYPASS_AUTH: false
+PORT: 3000

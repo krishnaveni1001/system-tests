@@ -1,0 +1,1286 @@
+{
+  "contractGroupData": {
+    "contractType": "R",
+    "amendmentData": {
+      "nameOrNumber": "10",
+      "amendmentEffectiveDate": "2019-11-26"
+    },
+    "contractName": "LEHN00660A"
+  },
+  "customerCode": "FR100466",
+  "oceanData": [
+    {
+      "oceanLeg": {
+        "destOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "JPSMZ",
+              "groupType": "L"
+            }
+          }
+        ],
+        "origOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "FRLEH",
+              "groupType": "L"
+            }
+          }
+        ]
+      },
+      "oceanServiceData": [
+        {
+          "commodityGroup": {
+            "commodityGroupName": "MACHINERY",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "T2",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "900.0",
+                    "oceanLegId": "1",
+                    "commodityId": "2",
+                    "referenceId": "1"
+                  }
+                ]
+              },
+              "containerGroup": [
+                {
+                  "containerOwner": "S"
+                }
+              ]
+            }
+          ],
+          "rateType": "DR",
+          "rateType2": "G",
+          "tradeLane": "AEE",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        }
+      ]
+    },
+    {
+      "oceanLeg": {
+        "destOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "JPSMZ",
+              "groupType": "L"
+            }
+          }
+        ],
+        "origOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "FRLEH",
+              "groupType": "L"
+            }
+          }
+        ]
+      },
+      "oceanServiceData": [
+        {
+          "commodityGroup": {
+            "commodityGroupName": "MACHINERY",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "T2",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "900.0",
+                    "oceanLegId": "2",
+                    "commodityId": "2",
+                    "referenceId": "1"
+                  }
+                ]
+              },
+              "containerGroup": [
+                {
+                  "containerOwner": "S"
+                }
+              ]
+            }
+          ],
+          "rateType": "DG",
+          "rateType2": "G",
+          "tradeLane": "AEE",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        }
+      ]
+    },
+    {
+      "oceanLeg": {
+        "destOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "FRLEH",
+              "groupType": "L"
+            }
+          }
+        ],
+        "origOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "JPSMZ",
+              "groupType": "L"
+            }
+          }
+        ]
+      },
+      "oceanServiceData": [
+        {
+          "commodityGroup": {
+            "commodityGroupName": "CHEMICAL",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "T2",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "1000.0",
+                    "oceanLegId": "1",
+                    "commodityId": "1",
+                    "referenceId": "1"
+                  }
+                ]
+              },
+              "containerGroup": [
+                {
+                  "containerOwner": "S"
+                }
+              ]
+            }
+          ],
+          "rateType": "DR",
+          "rateType2": "G",
+          "tradeLane": "AEW",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        },
+        {
+          "commodityGroup": {
+            "commodityGroupName": "CHEMICAL",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "T2",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "1000.0",
+                    "oceanLegId": "1",
+                    "commodityId": "1",
+                    "referenceId": "2"
+                  }
+                ]
+              },
+              "containerGroup": [
+                {
+                  "containerOwner": "S"
+                }
+              ]
+            }
+          ],
+          "rateType": "DG",
+          "rateType2": "G",
+          "tradeLane": "AEW",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        }
+      ]
+    },
+    {
+      "oceanLeg": {
+        "destOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "FRLEH",
+              "groupType": "L"
+            }
+          }
+        ],
+        "origOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "JPSMZ",
+              "groupType": "L"
+            }
+          }
+        ]
+      },
+      "oceanServiceData": [
+        {
+          "commodityGroup": {
+            "commodityGroupName": "CHEMICAL",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "T2",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "1000.0",
+                    "oceanLegId": "1",
+                    "commodityId": "2",
+                    "referenceId": "1"
+                  }
+                ]
+              },
+              "containerGroup": [
+                {
+                  "containerOwner": "S"
+                }
+              ]
+            }
+          ],
+          "rateType": "DR",
+          "rateType2": "G",
+          "tradeLane": "AEW",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        }
+      ]
+    },
+    {
+      "oceanLeg": {
+        "destOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "FRLEH",
+              "groupType": "L"
+            }
+          }
+        ],
+        "origOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "JPSMZ",
+              "groupType": "L"
+            }
+          }
+        ]
+      },
+      "oceanServiceData": [
+        {
+          "commodityGroup": {
+            "commodityGroupName": "CHEMICAL",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "T2",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "1000.0",
+                    "oceanLegId": "2",
+                    "commodityId": "2",
+                    "referenceId": "1"
+                  }
+                ]
+              },
+              "containerGroup": [
+                {
+                  "containerOwner": "S"
+                }
+              ]
+            }
+          ],
+          "rateType": "DG",
+          "rateType2": "G",
+          "tradeLane": "AEW",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        }
+      ]
+    },
+    {
+      "oceanLeg": {
+        "destOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "JPYOK",
+              "groupType": "L"
+            }
+          }
+        ],
+        "origOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "FRFOS",
+              "groupType": "L"
+            }
+          }
+        ]
+      },
+      "oceanServiceData": [
+        {
+          "commodityGroup": {
+            "commodityGroupName": "FAK",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "F4",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "2450.0",
+                    "oceanLegId": "1",
+                    "commodityId": "1",
+                    "referenceId": "1",
+                    "rateStatus": "Delete"
+                  }
+                ]
+              }
+            }
+          ],
+          "rateType": "AK",
+          "rateType2": "G",
+          "tradeLane": "AME",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        }
+      ]
+    },
+    {
+      "oceanLeg": {
+        "destOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "MXATM",
+              "groupType": "L"
+            }
+          }
+        ],
+        "origOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "FRLEH",
+              "groupType": "L"
+            }
+          }
+        ]
+      },
+      "oceanServiceData": [
+        {
+          "commodityGroup": {
+            "commodityGroupName": "MACHINERY",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "D2",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "1200.0",
+                    "oceanLegId": "1",
+                    "commodityId": "1",
+                    "referenceId": "1",
+                    "rateStatus": "Delete"
+                  }
+                ]
+              }
+            }
+          ],
+          "rateType": "DR",
+          "rateType2": "G",
+          "tradeLane": "TAW",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        }
+      ]
+    },
+    {
+      "oceanLeg": {
+        "destOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "MXATM",
+              "groupType": "L"
+            }
+          }
+        ],
+        "origOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "FRLEH",
+              "groupType": "L"
+            }
+          }
+        ]
+      },
+      "oceanServiceData": [
+        {
+          "commodityGroup": {
+            "commodityGroupName": "MACHINERY",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "F4",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "4900.0",
+                    "oceanLegId": "2",
+                    "commodityId": "1",
+                    "referenceId": "2",
+                    "rateStatus": "Delete"
+                  }
+                ]
+              }
+            }
+          ],
+          "rateType": "AK",
+          "rateType2": "G",
+          "tradeLane": "TAW",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        }
+      ]
+    },
+    {
+      "oceanLeg": {
+        "destOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "SAJED",
+              "groupType": "L"
+            }
+          }
+        ],
+        "origOceanLocation": [
+          {
+            "locationInfo": {
+              "locationMode": "P",
+              "unCode": "FRLEH",
+              "groupType": "L"
+            }
+          }
+        ]
+      },
+      "oceanServiceData": [
+        {
+          "commodityGroup": {
+            "commodityGroupName": "Machinery",
+            "commodityGroupType": "S",
+            "commodityList": {
+              "commodityData": [
+                {
+                  "carrierCommodityCode": "000000",
+                  "commodityName": "FAK OR CARGO, NOS"
+                }
+              ]
+            }
+          },
+          "rateDetail": [
+            {
+              "containerTypeCode": "O4",
+              "rateCharges": {
+                "rateCharge": [
+                  {
+                    "currency": "USD",
+                    "effectiveDate": "2019-11-26",
+                    "expirationDate": "2019-12-26",
+                    "rate": "1600.0",
+                    "oceanLegId": "1",
+                    "commodityId": "1",
+                    "referenceId": "1",
+                    "rateStatus": "Delete"
+                  }
+                ]
+              }
+            }
+          ],
+          "rateType": "DR",
+          "rateType2": "G",
+          "tradeLane": "WEE",
+          "origTermType": "CY",
+          "destTermType": "CY"
+        }
+      ]
+    }
+  ],
+  "carrierTechEmailList": {
+    "carrierTechEmail": "yjjeon@cyberlogitec.com"
+  },
+  "carrierTransmissionId": "99999999",
+  "contractGlobalSurcharge": {
+    "surchargeGlobalData": [
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "10",
+            "surchargeType": "I",
+            "term": "BAF",
+            "rateType2": "G",
+            "surchargeDescription": "BUNKER ADJUSTMENT FACTOR",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEE"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "11",
+            "surchargeType": "I",
+            "term": "CAF",
+            "rateType2": "G",
+            "surchargeDescription": "CURRENCY ADJUSTMENT FACTOR",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEE"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "12",
+            "surchargeType": "I",
+            "term": "SCT",
+            "rateType2": "G",
+            "surchargeDescription": "SUEZ CANAL TRANSIT",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEE"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "13",
+            "surchargeType": "I",
+            "term": "EMS",
+            "rateType2": "G",
+            "surchargeDescription": "EMERGENCY SURCHARGE",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEE"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "14",
+            "surchargeType": "I",
+            "term": "HEA",
+            "rateType2": "G",
+            "surchargeDescription": "HEAVY SURCHARGE",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEE"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "15",
+            "surchargeType": "I",
+            "term": "THL",
+            "rateType2": "G",
+            "surchargeDescription": "TERMINAL HANDLING CHARGE (L)",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEE"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "16",
+            "surchargeType": "I",
+            "term": "BRS",
+            "rateType2": "G",
+            "surchargeDescription": "BUNKER COST RECOVERY SURCHARGE",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEE"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "11",
+            "surchargeType": "I",
+            "term": "BAF",
+            "rateType2": "G",
+            "surchargeDescription": "BUNKER ADJUSTMENT FACTOR",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "12",
+            "surchargeType": "I",
+            "term": "BRS",
+            "rateType2": "G",
+            "surchargeDescription": "BUNKER COST RECOVERY SURCHARGE",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "13",
+            "surchargeType": "I",
+            "term": "CAF",
+            "rateType2": "G",
+            "surchargeDescription": "CURRENCY ADJUSTMENT FACTOR",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "14",
+            "surchargeType": "I",
+            "term": "CSS",
+            "rateType2": "G",
+            "surchargeDescription": "CARRIER SECURITY SURCHARGE",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "15",
+            "surchargeType": "I",
+            "term": "EMS",
+            "rateType2": "G",
+            "surchargeDescription": "EMERGENCY SURCHARGE",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "16",
+            "surchargeType": "I",
+            "term": "HEA",
+            "rateType2": "G",
+            "surchargeDescription": "HEAVY SURCHARGE",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "17",
+            "surchargeType": "I",
+            "term": "SCT",
+            "rateType2": "G",
+            "surchargeDescription": "SUEZ CANAL TRANSIT",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "18",
+            "surchargeType": "I",
+            "term": "THL",
+            "rateType2": "G",
+            "surchargeDescription": "TERMINAL HANDLING CHARGE (L)",
+            "commodityId": "2"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "2",
+            "surchargeType": "I",
+            "term": "BAF",
+            "rateType2": "G",
+            "surchargeDescription": "BUNKER ADJUSTMENT FACTOR",
+            "commodityId": "1"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "3",
+            "surchargeType": "I",
+            "term": "CAF",
+            "rateType2": "G",
+            "surchargeDescription": "CURRENCY ADJUSTMENT FACTOR",
+            "commodityId": "1"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "4",
+            "surchargeType": "I",
+            "term": "CSS",
+            "rateType2": "G",
+            "surchargeDescription": "CARRIER SECURITY SURCHARGE",
+            "commodityId": "1"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "5",
+            "surchargeType": "I",
+            "term": "SCT",
+            "rateType2": "G",
+            "surchargeDescription": "SUEZ CANAL TRANSIT",
+            "commodityId": "1"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "6",
+            "surchargeType": "I",
+            "term": "EMS",
+            "rateType2": "G",
+            "surchargeDescription": "EMERGENCY SURCHARGE",
+            "commodityId": "1"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "8",
+            "surchargeType": "I",
+            "term": "THL",
+            "rateType2": "G",
+            "surchargeDescription": "TERMINAL HANDLING CHARGE (L)",
+            "commodityId": "1"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "9",
+            "surchargeType": "I",
+            "term": "BRS",
+            "rateType2": "G",
+            "surchargeDescription": "BUNKER COST RECOVERY SURCHARGE",
+            "commodityId": "1"
+          }
+        ],
+        "tradeLane": "AEW"
+      },
+      {
+        "locationData": {
+          "originAndDestination": [
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "O"
+            },
+            {
+              "anyLocationInd": "Y",
+              "origDestInd": "D"
+            }
+          ]
+        },
+        "surchargeDataGlobal": [
+          {
+            "effectiveDate": "2019-11-26",
+            "expirationDate": "2019-12-26",
+            "rateType": "DG",
+            "priceBy": "PER_CONTAINER",
+            "referenceId": "10",
+            "surchargeType": "S",
+            "term": "HAZ",
+            "rateType2": "G",
+            "surchargeDescription": "HAZ ADDITIONAL CHARGE",
+            "commodityId": "1"
+          }
+        ],
+        "tradeLane": "AEW"
+      }
+    ]
+  }
+}

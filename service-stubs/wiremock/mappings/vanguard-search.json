@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/appservicev2/api/adesso-api/get-quote",
+    "bodyPatterns" : [
+      {
+        "equalToJson" : "{\"requirePickup\":true,\"pickupDate\":\"28-Feb-2019\",\"originCountry\":\"US\",\"origin\":\"90815\",\"requireDelivery\":true,\"destinationCountry\":\"CN\",\"destination\":\"266001\",\"requireFulfillment\":false,\"weight\":\"1000\",\"weightUnit\":\"kgs\",\"volume\":\"0.0283\",\"volumeUnit\":\"cbm\",\"numOfPackages\":\"1\",\"dimensions\":[{\"length\":\"12\",\"width\":\"12\",\"height\":\"12\",\"uom\":\"IN\",\"weight\":\"1000\",\"weightUnit\":\"kgs\"}],\"hazardous\":false,\"packageType\":\"BOX\",\"additionalServices\":{\"customsClearanceImport\":true,\"customsClearanceExport\":true,\"aes\":true,\"ams\":true,\"palletization\":true,\"unStackable\":true,\"originTruckServices\":{\"isLiftGate\":false,\"isResidential\":false,\"isConstructionSiteFee\":false,\"isTradeShowFee\":false},\"destinationTruckServices\":{\"isLiftGate\":false,\"isResidential\":false,\"isConstructionSiteFee\":false,\"isTradeShowFee\":false}}}"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "vanguard-search-response.json"
+  }
+}

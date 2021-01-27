@@ -1,0 +1,473 @@
+version: '3.7'
+
+services:
+  proxy:
+    image: ${IMAGE_PROXY} # this will use the latest version of 1.11.x
+    ports:
+      - '80:80' # expose 80 on host and sent to 80 in container
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/static/keys:/www/data/keys
+    networks:
+      corenet:
+        aliases:
+          - proxy
+  psql:
+    image: ${IMAGE_PSQL}
+    ports:
+      - '5433:5432'
+    environment:
+      - PGPASSWORD=${PG_PASS}
+      - REMOTE_DB_USER=${REMOTE_DB_USER}
+      - REMOTE_DB_HOST=${REMOTE_DB_ADDR}
+      - REMOTE_DB_DB=${REMOTE_DB_DB}
+      - REMOTE_SSH_USER=${REMOTE_SSH_USER}
+    volumes:
+      - ./postgres/assets:/docker-entrypoint-initdb.d
+      - ./postgres/assets/cs-docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh
+      - ./postgres/mnt:/tmp/mnt
+    networks:
+      corenet:
+        aliases:
+          - pqsl
+  auth-service:
+    image: ${IMAGE_AUTH_SERVICE}
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=auth_user
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - AUTH_SERVICE_PORT=3000
+      - AUTH_KEYS_PRIVATE_PATH=/usr/local/services/spring-boot/auth-service/keys/private_key_pkcs8.pem
+      - AUTH_KEYS_PUBLIC_PATH=/usr/local/services/spring-boot/auth-service/keys/public_key.pem
+      - API_BASE_URL=$API_BASE_URL
+      - ADMIN_CONTEXT_PATH=/admin
+      - SERVICE_TOKEN_AUTH_ADMIN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoic2VydmljZSIsInVzZXJJZCI6LTEsInVzZXJUeXBlSWQiOjQsImFkbWluSWQiOjAsImNsaWVudFZpZXdJZCI6MCwicGVybWlzc2lvbnMiOnt9LCJpc3MiOiJDYXJnb1NwaGVyZSIsImlhdCI6MTU2MjAwODI3Nn0.bsUyFI8HMgUdhFWF4GCVYGGCEZ4I3a2HJ7fT8JbGA-03vneAAkaAfyOPI7WQMZyIWIqc06nWlBh8R7p2ZCGCqaVEm39zRT366qoxT30I7-88li-rnr9YGGlGaU3DjNhtkbL0QhdYe2jzBGTcYpFlwAhowheNbhG6lLjBppW7z3WMdriEpDZMVn7PNz0Z9J4GANcWKQD9PU5pBBZghPxCctrkmfw9AmZol1BfIdoyDVegoNPp4Sh--AIRfIbYaIaL56tuuCFyY80s0eEeRCP2qrqqRusqBxNTp8fy3rj-KhWDU1MJUkQ8NeWWJDc1BlEKGNHYJxtdxXesoKSpi5DbTw
+    ports:
+      - '4002:3000'
+    volumes:
+      - ./auth/keys:/usr/local/services/spring-boot/auth-service/keys
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - auth
+  cap:
+    image: ${IMAGE_COPY_AND_PERSIST}
+    environment:
+      - API_BASE_URL=$API_BASE_URL
+      - AUTH_SERVICE_API_PATH=$API_BASE_URL/auth
+      - COPY_AND_PERSIST_NOTIFICATION_API_TOKEN=fake-token
+      - COPY_AND_PERSIST_NOTIFICATION_API_URI=$API_BASE_URL/notification
+      - ENVIRONMENT=${ENVIRONMENT}
+      - ESUDS_COPY_AND_PERSIST_API_SECRET=secret
+      - ESUDS_COPY_AND_PERSIST_BLACKLIST_FILEPATH=/home/cron/mnt/err
+      - ESUDS_COPY_AND_PERSIST_ERROR_FILEPATH=/home/cron/mnt/err
+      - ESUDS_COPY_AND_PERSIST_API_FILEPATH=/home/cron/mnt/api
+      - ESUDS_COPY_AND_PERSIST_INPUT_FILEPATH=/home/cron/mnt/in
+      - ESUDS_COPY_AND_PERSIST_OUTPUT_FILEPATH=/home/cron/mnt/out
+      - ESUDS_COPY_AND_PERSIST_PORT=3000
+      - ESUDS_READ_AND_VALIDATE_API_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDYXJnb1NwaGVyZSIsInVzZXJJZCI6ImRtYXN0ZXIiLCJjbGllbnRJZCI6IjEwMiIsImNsaWVudE5hbWUiOiJyYXYtY2xpZW50Iiwic291cmNlIjoic3lzdGVtIGdlbmVyYXRlZCBhdXRvbWF0ZWQgdGVzdCBzdWl0ZSJ9.tD_9GQRmRlOWuTTy0ya7dnj3WU8uEbyHYnTEJDDSWRY
+      - NOTIFICATION_SVC_API=${NOTIFICATION_SVC_API}
+      - AUTH_SVC_API=${AUTH_SVC_API}
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=cap_user
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - SERVICE_PORT=3000
+    ports:
+      - '4003:3000'
+    volumes:
+      - ./esuds/mnt/err:/home/cron/mnt/err
+      - ./esuds/mnt/in:/home/cron/mnt/in
+      - ./esuds/mnt/out:/home/cron/mnt/out
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - cap
+  compare:
+    image: ${IMAGE_ESUDS_RATE_SEARCH_COMPARISON}
+    entrypoint:
+      - java
+      - -jar
+      - /usr/local/services/spring-boot/esuds-rate-search-compare/latest
+      - -Dlogging.level.org.spring.jdbc.core.JdbcTemplate=debug
+      - -Dlogging.level.us.cargosphere=trace
+    environment:
+      - RS_API_BASE_URL_CONTRACT1={http://proxy/api/rate-service}
+      - RS_API_BASE_URL_CONTRACT2={http://proxy/api/rate-service-2}
+      - ENV=${ENVIRONMENT}
+      - ORIG_DEST_COMBINATION_THRESHOLD=20
+      - OUTPUT_DIRECTORY=/tmp/out
+      - POSTGRES_CONTRACT1_DB=${PG_DB}
+      - POSTGRES_CONTRACT1_HOST=${PG_HOST}
+      - POSTGRES_CONTRACT1_PASSWORD=${PG_PASS}
+      - POSTGRES_CONTRACT1_PORT=${PG_PORT}
+      - POSTGRES_CONTRACT1_USER=cs_compare_user
+      - POSTGRES_CONTRACT2_DB=${PG_DB}
+      - POSTGRES_CONTRACT2_HOST=${PG_HOST}
+      - POSTGRES_CONTRACT2_PASSWORD=${PG_PASS}
+      - POSTGRES_CONTRACT2_PORT=${PG_PORT}
+      - POSTGRES_CONTRACT2_USER=cs_compare_user
+      - SERVICE_PORT=3000
+      - LOGGING_LEVEL_us.cargosphere=TRACE
+    ports:
+      - '4007:3000'
+    volumes:
+      - ./rate-search-compare/out:/tmp/out
+    depends_on:
+      - "psql"
+      - "rate-search"
+      - "rate-search-2"
+    networks:
+      corenet:
+        aliases:
+          - rate-search-2
+  rav:
+    image: ${IMAGE_READ_AND_VALIDATE}
+    environment:
+      - API_BASE_URL=${API_BASE_URL}
+      - API_THREAD=1
+      - CONTRACT_SCHED_CRON=0 */30 * * * *
+      - CONTRACT_SCHED_THREAD=1
+      - ENVIRONMENT=${ENVIRONMENT}
+      - ESUDS_ENGINE_API_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDYXJnb1NwaGVyZSIsInVzZXJJZCI6ImRtYXN0ZXIiLCJjbGllbnRJZCI6IjEwMiIsImNsaWVudE5hbWUiOiJzdWRzLWVuZ2luZS1jbGllbnQiLCJzb3VyY2UiOiJzeXN0ZW0gZ2VuZXJhdGVkIGF1dG9tYXRlZCB0ZXN0IHN1aXRlIn0.jb4TPXUBrfg6Gxz_yL9vWIha0IV8FuCuNgnrhr70LD0
+      - ESUDS_READ_AND_VALIDATE_API_SECRET=secret
+      - ESUDS_READ_AND_VALIDATE_PORT=3000
+      - NOTIFICATION_SVC_API=${NOTIFICATION_SVC_API}
+      - AUTH_SVC_API=${AUTH_SVC_API}
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=rav_user
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - READ_AND_VALIDATE_NOTIFICATION_API_TOKEN=fake-token
+      - SCHED_TRANS_CRON=0 */30 * * * *
+    ports:
+      - '4004:3000'
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - rav
+  suds-engine:
+    image: ${IMAGE_SUDS_ENGINE}
+    environment:
+      - API_BASE_URL=${API_BASE_URL}
+      - API_THREAD=1
+      - CONTRACT_SCHED_CRON=0 */30 * * * *
+      - CONTRACT_SCHED_THREAD=1
+      - ENVIRONMENT=${ENVIRONMENT}
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=se_user
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - SUDS_ENGINE_API_SECRET=secret
+      - SUDS_ENGINE_IMAGES=/home/images
+      - SUDS_ENGINE_NOTIFICATION_API_TOKEN=fake-token
+      - SUDS_ENGINE_PORT=3000
+    ports:
+      - '4005:3000'
+    volumes:
+      - ./esuds/images:/home/images
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - suds-engine
+  rate-search:
+    image: ${IMAGE_RATE_SEARCH}
+    entrypoint:
+      - java
+      - -jar
+      - /usr/local/services/spring-boot/rate-service-rs/latest
+      - -Dlogging.level.org.spring.jdbc.core.JdbcTemplate=debug
+      - -Dlogging.level.us.cargosphere=trace
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=rss_user
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - RATE_SERVICE_RS_PORT=3000
+      - RATE_SERVICE_API_PATH=/api/rate-service/2
+      - LOGGING_LEVEL_us.cargosphere=TRACE
+      - RATE_LIMIT_QUANTITY=20
+    ports:
+      - '4001:3000'
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - rate-search
+  rate-search-2:
+    image: ${IMAGE_RATE_SEARCH_2}
+    entrypoint:
+      - java
+      - -jar
+      - /usr/local/services/spring-boot/rate-service-rs/latest
+      - -Dlogging.level.org.spring.jdbc.core.JdbcTemplate=debug
+      - -Dlogging.level.us.cargosphere=trace
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=rss_user
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - RATE_SERVICE_RS_PORT=3000
+      - LOGGING_LEVEL_us.cargosphere=TRACE
+    ports:
+      - '4006:3000'
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - rate-search-2
+  autocomplete:
+    image: ${IMAGE_AUTOCOMPLETE}
+    environment:
+      - API_BASE_URL=$API_BASE_URL
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=autocomplete_user
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - ES_USER=es_user
+      - ES_PASS=es_pass
+      - AUTOCOMPLETE_PORT=3000
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - autocomplete
+  core:
+    image: ${IMAGE_CORE}
+    environment:
+      - DB_ADDR=${PG_HOST}
+      - DB_DB=${PG_DB}
+      - DB_PORT=${PG_PORT}
+      - DB_USER=cs_user
+      - DB_PASS=${PG_PASS}
+      - PGPASSWORD=${PG_PASS}
+      - ENVIRONMENT_BASE_URL=http://proxy
+      - ADMIN_SERVICE_URL=/admin
+      - AUTH_SERVICE_URL=/auth
+      - NOTIFICATION_SERVICE_URL=http://proxy
+      - SKIP_HOST_VERIFIER=true
+      - SERVICE_TOKEN_AUTH=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoic2VydmljZSIsInVzZXJJZCI6LTEsInVzZXJUeXBlSWQiOjQsImFkbWluSWQiOjAsImNsaWVudFZpZXdJZCI6MCwicGVybWlzc2lvbnMiOnt9LCJpc3MiOiJDYXJnb1NwaGVyZSIsImlhdCI6MTU2MjAwODI3Nn0.bsUyFI8HMgUdhFWF4GCVYGGCEZ4I3a2HJ7fT8JbGA-03vneAAkaAfyOPI7WQMZyIWIqc06nWlBh8R7p2ZCGCqaVEm39zRT366qoxT30I7-88li-rnr9YGGlGaU3DjNhtkbL0QhdYe2jzBGTcYpFlwAhowheNbhG6lLjBppW7z3WMdriEpDZMVn7PNz0Z9J4GANcWKQD9PU5pBBZghPxCctrkmfw9AmZol1BfIdoyDVegoNPp4Sh--AIRfIbYaIaL56tuuCFyY80s0eEeRCP2qrqqRusqBxNTp8fy3rj-KhWDU1MJUkQ8NeWWJDc1BlEKGNHYJxtdxXesoKSpi5DbTw
+      - JAVA_OPTS=-Dmail.smtp.host="mail" -Dmail.smtp.port="1025"
+      - dev_WS_BASE_URL=http://proxy/api/rate-service
+      - LOG4J_SMTP_FROM=localhost@cargosphere.com
+      - LOG4J_SMTP_TO=no-reply@cargosphere.com
+      - NOTIFICATION_SERVICE_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDYXJnb1NwaGVyZSIsInVzZXJJZCI6InFhYXV0b19zdXBlciIsImNsaWVudElkIjoiODAwIiwiY2xpZW50TmFtZSI6Im1hbnVhbC10b2tlbiIsInNvdXJjZSI6ImludGVybmFsIiwic2VydmljZSI6Im5vdGlmaWNhdGlvbi1zZXJ2aWNlIiwicGVybWlzc2lvbnMiOlsiU01UUF9TRU5EIl19.7J_RXwJjSWSwgNtkApYfxDqzzIenootjJwNLNa2ut08
+    ports:
+      - '4080:8080'
+    depends_on:
+      - "psql"
+      - "autocomplete"
+    networks:
+      corenet:
+        aliases:
+          - core
+  quote-service:
+    image: ${IMAGE_QUOTE_CART}
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=cs_quote_user
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - API_BASE_URL=${API_BASE_URL}
+      - SSL_NAMECHECK_BYPASS=${SSL_NAMECHECK_BYPASS}
+      - QUOTE_SERVICE_PORT=3000
+    ports:
+      - '4008:3000'
+    depends_on:
+      - "psql"
+      - "core"
+    networks:
+      corenet:
+        aliases:
+          - core
+  preferences:
+    image: ${IMAGE_PREFERENCES_SERVICE}
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=cs_preferences_service
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - POSTGRES_CONNECTION_TIMEOUT=5
+      - API_BASE_URL=${API_BASE_URL}
+      - PORT=3000
+      - CONFIG_FILE=config
+      - CONFIG_PATH=/root
+    ports:
+      - '4009:3000'
+    volumes:
+      - ./preferences/config.yaml:/root/config.yaml
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - core
+  contract-management:
+    image: ${IMAGE_CONTRACT_MANAGEMENT_SERVICE}
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=cs_cms_service
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - SERVICE_PORT=3000
+      - API_BASE_URL=http://proxy/
+      - ENVIRONMENT_BASE_URL=http://proxy
+      - ADMIN_CONTEXT_PATH=/api/admin
+      - SERVICE_TOKEN_ADMIN_PERM=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoic2VydmljZSIsInVzZXJJZCI6LTEsInVzZXJUeXBlSWQiOjQsImFkbWluSWQiOjAsImNsaWVudFZpZXdJZCI6MCwicGVybWlzc2lvbnMiOnt9LCJpc3MiOiJDYXJnb1NwaGVyZSIsImlhdCI6MTU2MjAwODI3Nn0.bsUyFI8HMgUdhFWF4GCVYGGCEZ4I3a2HJ7fT8JbGA-03vneAAkaAfyOPI7WQMZyIWIqc06nWlBh8R7p2ZCGCqaVEm39zRT366qoxT30I7-88li-rnr9YGGlGaU3DjNhtkbL0QhdYe2jzBGTcYpFlwAhowheNbhG6lLjBppW7z3WMdriEpDZMVn7PNz0Z9J4GANcWKQD9PU5pBBZghPxCctrkmfw9AmZol1BfIdoyDVegoNPp4Sh--AIRfIbYaIaL56tuuCFyY80s0eEeRCP2qrqqRusqBxNTp8fy3rj-KhWDU1MJUkQ8NeWWJDc1BlEKGNHYJxtdxXesoKSpi5DbTw
+      - SSL_NAMECHECK_BYPASS=${SSL_NAMECHECK_BYPASS}
+    ports:
+      - '4010:3000'
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - core
+  admin-service:
+    image: ${IMAGE_ADMIN_SERVICE}
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=cs_admin_service
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - API_BASE_URL=${API_BASE_URL}
+      - BASE_URL=http://proxy
+      - SSL_NAMECHECK_BYPASS=${SSL_NAMECHECK_BYPASS}
+      - ADMIN_CONTEXT_PATH=/admin
+      - PERM_CONTEXT_PATH=/permission
+      - AUTH_CONTEXT_PATH=/auth
+      - IMAGE_PATH=/home/services/
+      - SERVICE_TOKEN_ADMIN_PERM=fake-token
+      - NOTIFICATION_SERVICE_URL=http://proxy
+      - NOTIFICATION_API_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDYXJnb1NwaGVyZSIsInVzZXJJZCI6InFhYXV0b19zdXBlciIsImNsaWVudElkIjoiODAwIiwiY2xpZW50TmFtZSI6Im1hbnVhbC10b2tlbiIsInNvdXJjZSI6ImludGVybmFsIiwic2VydmljZSI6Im5vdGlmaWNhdGlvbi1zZXJ2aWNlIiwicGVybWlzc2lvbnMiOlsiU01UUF9TRU5EIl19.7J_RXwJjSWSwgNtkApYfxDqzzIenootjJwNLNa2ut08
+    ports:
+      - '4011:3000'
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - core
+  permission-service:
+    image: ${IMAGE_PERMISSION_SERVICE}
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=cs_permission_service
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - API_BASE_URL=${API_BASE_URL}
+      - SSL_NAMECHECK_BYPASS=${SSL_NAMECHECK_BYPASS}
+    ports:
+      - '4012:3000'
+    depends_on:
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - core
+  mail:
+    image: ${IMAGE_MAIL}
+    ports:
+      - '4013:1025'
+      - '4014:8025'
+    networks:
+      corenet:
+        aliases:
+          - core
+  stubs:
+    image: ${IMAGE_SERVICE_STUBS}
+    command: --verbose
+    ports:
+      - '4015:8080'
+    volumes:
+      - ./service-stubs/wiremock:/home/wiremock
+    networks:
+      corenet:
+        aliases:
+          - core
+  redis:
+    image: ${IMAGE_UMBRELLA_REDIS}
+    ports:
+      - '4017:6379'
+    networks:
+      corenet:
+        aliases:
+          - core
+  umbrella-backend:
+    image: ${IMAGE_UMBRELLA_BACKEND}
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=cs_umbrella_backend
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - REDIS_PORT=6379
+      - REDIS_HOST=redis
+      - SSL_NAMECHECK_BYPASS=${SSL_NAMECHECK_BYPASS}
+      - PORT=3000
+    ports:
+      - '4018:3000'
+    volumes:
+      - ./umbrella/config.yaml:/usr/configmap.yaml
+    depends_on:
+      - "proxy"
+      - "psql"
+      - "redis"
+    networks:
+      corenet:
+        aliases:
+          - core
+
+  notification-service:
+    image: ${IMAGE_NOTIFICATION_SERVICE}
+    environment:
+      - POSTGRES_HOST=${PG_HOST}
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=cs_permission_service
+      - POSTGRES_PASSWORD=${PG_PASS}
+      - API_BASE_URL=${API_BASE_URL}
+      - SSL_NAMECHECK_BYPASS=${SSL_NAMECHECK_BYPASS}
+      - NOTIFICATION_SERVICE_PORT=3000
+      - NOTIFICATION_SERVICE_API_SECRET=secret
+      - SHARE_PATH=/tmp
+      - MAIL_HOST=mail
+      - MAIL_PORT=1025
+    ports:
+      - '4016:3000'
+    depends_on:
+      - "mail"
+      - "proxy"
+      - "psql"
+    networks:
+      corenet:
+        aliases:
+          - core
+
+networks:
+  corenet:
+    name: system-tests

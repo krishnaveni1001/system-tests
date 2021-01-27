@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "quoteDetails": {
+    "quotedDate": "28-Feb-2019",
+    "validTo": "28-Feb-2019",
+    "quoteId": "WD1901100075",
+    "estimatedTransitTime": "28",
+    "quoteAmount": "1000.00",
+    "currency": "USD",
+    "estimatedDeliveryDate": "01-Apr-2019"
+  },
+  "sailingInfo": {
+    "vesselName": "COSCO SHIPPING ROSE",
+    "voyage": "01",
+    "lrd": "28-Feb-2019",
+    "etd": "28-Feb-2019",
+    "eta": "28-Feb-2019",
+    "loadPort": "CNTAO",
+    "dischargePort": "USCHS",
+    "transshipmentPort": "USNYC"
+  },
+  "additionalServices": {
+    "customsClearanceImport": true,
+    "customsClearanceExport": true,
+    "aes": true,
+    "ams": true,
+    "palletization": true,
+    "unStackable": true,
+    "originTruckServices": {
+      "isLiftGate": false,
+      "isResidential": false,
+      "isConstructionSiteFee": false,
+      "isTradeShowFee": false
+    },
+    "destinationTruckServices": {
+      "isLiftGate": false,
+      "isResidential": false,
+      "isConstructionSiteFee": false,
+      "isTradeShowFee": false
+    }
+  },
+  "charges": [
+    {
+      "chargeType": "B",
+      "chargeCode": "OCF",
+      "chargeDesc": "OCEAN FREIGHT",
+      "currency": "USD",
+      "total": "42",
+      "totalInUsd": "42"
+    }
+  ]
+}

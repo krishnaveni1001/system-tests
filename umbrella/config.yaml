@@ -1,0 +1,33 @@
+postgres:
+  HOST:
+  DB:
+  USER:
+  PASSWORD:
+  CONNECTION_TIMEOUT: "5"
+  CONNECTION_MAX_LIFETIME: 180
+
+redis:
+  HOST:
+  PORT:
+  esuds:
+    GetContractsReport: 3600
+    GetLiveUploads: 9
+    GetActiveContractHistory: 3600
+    GetCarriers: 3600
+    GetCompanies: 3600
+    GetAllUploads: 3600
+  suds:
+    GetAllAmendments: 86400
+    GetAllContracts: 86400
+    GetRates: 86400
+  RATE_SEARCH_RELOAD_TIME: 3600
+
+bigquery:
+  project:
+  credentials:
+
+auth:
+  PUBLIC_KEY_URL: "http://proxy/api/auth/publickey?format=pem"
+
+SSL_CHECK_BYPASS: true
+LOG_LEVEL: "debug"

@@ -1,0 +1,10 @@
+#!/bin/bash
+PSQL_TAG=$1
+RESET=$2
+if [ $RESET ]; then
+  echo "Resetting docker-compose"
+  sed -i "s;$PSQL_TAG;gcr.io/awesomecstools/system-tests/cs-postgres-with-openssl:11.4;g" 'docker-compose.yaml'
+else
+  echo "Updating docker-compose to use tag: $PSQL_TAG"
+  sed -i "s;gcr.io/awesomecstools/system-tests/cs-postgres-with-openssl:11.4;$PSQL_TAG;g" 'docker-compose.yaml'
+fi

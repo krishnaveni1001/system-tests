@@ -1,0 +1,26 @@
+layer=$1
+action=$2
+
+case "$layer" in
+  admin)                containers='admin-service';;
+  baseline)             containers='proxy auth-service admin-service psql';;
+  compare)              containers='rate-search-2 compare';;
+  contract-management)  containers='contract-management';;
+  core)                 containers='rate-search core autocomplete';;
+  esuds)                containers='cap rav suds-engine';;
+  preferences)          containers='preferences';;
+  quote)                containers='quote-service';;
+  umbrella)             containers='redis umbrella-backend';;
+  mail)                 containers='notification-service mail';;
+  stubs)                containers='stubs';;
+  *)                    echo "Unrecognized layer :: $layer"; exit 1;;
+esac
+
+# Now start/stop the containers
+if [[ "$action" == "up" ]]; then
+  echo "Starting $layer containers"
+  docker-compose up -d $containers
+else
+  echo "Stopping $layer containers"
+  docker-compose rm -f -s $containers
+fi

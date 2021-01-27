@@ -1,0 +1,22 @@
+source .env
+docker pull $IMAGE_ADMIN_SERVICE
+docker pull $IMAGE_AUTH_SERVICE
+docker pull $IMAGE_AUTOCOMPLETE
+docker pull $IMAGE_CONTRACT_MANAGEMENT_SERVICE
+docker pull $IMAGE_COPY_AND_PERSIST
+docker pull $IMAGE_CORE
+docker pull $IMAGE_ESUDS_RATE_SEARCH_COMPARISON
+docker pull $IMAGE_MAIL
+docker pull $IMAGE_NOTIFICATION_SERVICE
+docker pull $IMAGE_PERMISSION_SERVICE
+docker pull $IMAGE_PREFERENCES_SERVICE
+docker pull $IMAGE_PROXY
+docker pull $IMAGE_PSQL
+docker pull $IMAGE_QUOTE_CART
+docker pull $IMAGE_READ_AND_VALIDATE
+docker pull $IMAGE_RATE_SEARCH
+docker pull $IMAGE_RATE_SEARCH_2
+docker pull $IMAGE_SERVICE_STUBS
+docker pull $IMAGE_SUDS_ENGINE
+docker pull $IMAGE_UMBRELLA_BACKEND
+docker pull $IMAGE_UMBRELLA_REDIS

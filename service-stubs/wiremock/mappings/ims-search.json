@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/imsservice.php",
+    "bodyPatterns" : [
+      {
+        "equalToXml" : "<?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"><soapenv:Body><getQuotesForCE xmlns=\"http://apps.imstransport.com/imsservice.php\"><clientkey xmlns=\"\">clientkey</clientkey><username xmlns=\"\">cargosphere</username><password xmlns=\"\">233|209|229|220|237|208|230|201|</password><MoveTypeId xmlns=\"\">1</MoveTypeId><Mode xmlns=\"\">ALL</Mode><LiveDropInd xmlns=\"\">L</LiveDropInd><LoadedEmptyInd xmlns=\"\">L</LoadedEmptyInd><ImportExport xmlns=\"\">X</ImportExport><ContainerSize xmlns=\"\">ALL</ContainerSize><ContainerType xmlns=\"\">DV/HC</ContainerType><P2 xmlns=\"\">Chapel Hill, NC</P2><Client2 xmlns=\"\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:nil=\"1\"/><HazardousInd xmlns=\"\">N</HazardousInd><ReeferInd xmlns=\"\">N</ReeferInd><OverweightInd xmlns=\"\">N</OverweightInd></getQuotesForCE></soapenv:Body></soapenv:Envelope>"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "ims-search.xml"
+  }
+}

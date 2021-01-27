@@ -1,0 +1,110 @@
+echo '_______                                                            _______'
+echo '\      \__________________________________________________________/      /'
+echo ' \      \ This script is meant to be run from the project root.  /      /'
+echo ' /       \ If it is run directly from the scripts directly, the /       \'
+echo '/_________\ docker-compose commands will not work as expected. /_________\'
+echo "           '--------------------------------------------------'"
+
+PRIVATE_KEY_PATH=$1
+SUITE=$2
+KEEP_ALIVE=$3
+
+# Mandatory arguments
+if [[ -z ${PRIVATE_KEY_PATH} ]]; then
+	echo "Please provide a path to the private key path as the first argument."
+	exit 1
+fi
+
+if [[ -z ${SUITE} ]]; then
+	echo "Please provide a carrier as the second argument."
+	exit 1
+fi
+
+if [ ! -f "./postgres/mnt/id_rsa" ]; then
+  echo "Copying keys from $PRIVATE_KEY_PATH to keys directory"
+  cp $PRIVATE_KEY_PATH ./postgres/mnt/id_rsa
+fi
+
+echo "Creating ./esuds/mnt/in/$SUITE"
+mkdir ./esuds/mnt/in/$SUITE
+
+case "$(uname -s)" in
+    Linux*)     echo "Linux detected… no change required";;
+    Darwin*)    echo "Darwin detected… no change required";;
+    CYGWIN*)    echo "Cygwin detected… updating scripts" && for f in `ls postgres/assets/*.sh`; do dos2unix $f; done;;
+    MINGW*)     echo "MinGW detected… updating scripts" && for f in `ls postgres/assets/*.sh`; do dos2unix $f; done;;
+    *)          echo "Unable to detect architecture… no changes attempted";;
+esac
+echo "Done modifying postgres shell scripts"
+
+./scripts/layer baseline up
+while true; do
+  echo "Searching for results from ./scripts/baseline up ..."
+  echo "We're expecting docker-compose hosts proxy, auth-service, and psql to be up."
+  docker logs system-tests_psql_1 | grep 'Done loading all database data at this point' && break;
+  sleep 10;
+done;
+
+./scripts/layer esuds up
+while true; do
+  echo "Searching for results from ./scripts/esuds up ..."
+  docker logs system-tests_cap_1 | grep 'u.c.e.c.EsudsCopyAndPersistApplication   : Started EsudsCopyAndPersistApplication' && \
+  docker logs system-tests_rav_1 | grep 'u.c.e.EsudsReadAndValidateApplication    : Started EsudsReadAndValidateApplication' && \
+  docker logs system-tests_suds-engine_1 | grep 'u.c.sudsengine.SudsEngineApplication     : Started SudsEngineApplication' && \
+  break;
+  sleep 10;
+done;
+
+# This is for future tests which need a clean slate, but we do not want to re-create the db every time
+# PSQL_TAG=baseline-psql:`date +"%Y%m%d-%H%M%S"`
+# docker commit `docker ps | grep system-tests_psql_1 | awk '{print $1}'` $PSQL_TAG
+# ./set-psql-image $PSQL_TAG false
+
+# load the contracts
+# the load-esuds-contracts script does not die until the contract is done loading.
+docker run \
+	--volume $(pwd)/esuds/mnt/in:/home/cron/mnt/in \
+	--network system-tests_corenet \
+	--env DB_ADDR=psql \
+	--env DB_DB=local \
+	--env DB_USER=cs_user \
+	gcr.io/awesomecstools/system-tests/qa-automation:latest /usr/local/cargosphere/scripts/load-esuds-contracts.sh $SUITE
+
+# tear down the esuds containers
+echo "Tearing down esuds containers."
+./scripts/layer esuds down
+while `docker ps | grep 'system-tests_cap_1'`; do
+  sleep 5;
+done;
+echo "Copy and Persist has shut down successfully."
+while `docker ps | grep 'system-tests_rav_1'`; do
+  sleep 5;
+done;
+echo "Read and Validate has shut down sucessfully."
+while `docker ps | grep 'system-tests_suds-engine_1'`; do
+  sleep 5;
+done;
+echo "SUDS Engine has shut down successfully."
+
+# start up the core containers
+./scripts/layer core up
+while true; do
+  sleep 10;
+  echo "Starting up core containers..."
+  docker logs system-tests_rate-search_1 | grep 'u.c.rate.RateServiceRsApplication        : Started RateServiceRsApplication' && \
+  docker logs system-tests_core_1 2>&1 | grep 'org.apache.catalina.startup.Catalina.start Server startup in' && \
+  break;
+done;
+
+# run the tests
+./scripts/tests $SUITE
+
+if [[ "true" == $KEEP_ALIVE ]]; then
+  echo "Network will remain up"
+else
+  echo "No request to keep network alive… shutting it down"
+  docker-compose down
+fi
+
+# reset the psql image (This is still just an idea)
+# ./set-psql-image $PSQL_TAG true

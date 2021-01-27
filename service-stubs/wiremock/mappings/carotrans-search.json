@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1/pricing/oceanrates",
+    "bodyPatterns" : [
+      {
+        "equalToJson" : "{\"data\": \"test\"}"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "carotrans-search-response.json"
+  }
+}
